@@ -10,6 +10,15 @@
       <Platform>Win32</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="huffman.h" />
+    <ClInclude Include="pQueue.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="huffman.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="pQueue.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{6734ACC8-50A4-438F-ABFD-754407C549D0}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
@@ -78,15 +87,6 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\..\..\..\Downloads\haffman\huffman\huffman.h" />
-    <ClInclude Include="..\..\..\..\..\Downloads\haffman\huffman\pQueue.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\..\..\..\Downloads\haffman\huffman\huffman.cpp" />
-    <ClCompile Include="..\..\..\..\..\Downloads\haffman\huffman\main.cpp" />
-    <ClCompile Include="..\..\..\..\..\Downloads\haffman\huffman\pQueue.cpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

@@ -15,21 +15,21 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\..\..\Downloads\haffman\huffman\pQueue.h">
+    <ClInclude Include="huffman.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\..\Downloads\haffman\huffman\huffman.h">
+    <ClInclude Include="pQueue.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\..\Downloads\haffman\huffman\main.cpp">
+    <ClCompile Include="huffman.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\..\Downloads\haffman\huffman\pQueue.cpp">
+    <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\..\Downloads\haffman\huffman\huffman.cpp">
+    <ClCompile Include="pQueue.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
