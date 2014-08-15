@@ -76,3 +76,9 @@ void CreateMGraph(MGraph *G)
 	}
 
 }
+
+void Floyd(MGraph G, )
+{
+	int i, j, k
+
+}
