@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "kruskal", "kruskal\kruskal.
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Dijkstra", "Dijkstra\Dijkstra.vcxproj", "{AEB328DF-1987-456B-8513-B73D187DE495}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Floyd", "Floyd\Floyd.vcxproj", "{CC21F667-EEAD-4DE4-9903-C480CDDEC5C4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -21,6 +23,10 @@ Global
 		{AEB328DF-1987-456B-8513-B73D187DE495}.Debug|Win32.Build.0 = Debug|Win32
 		{AEB328DF-1987-456B-8513-B73D187DE495}.Release|Win32.ActiveCfg = Release|Win32
 		{AEB328DF-1987-456B-8513-B73D187DE495}.Release|Win32.Build.0 = Release|Win32
+		{CC21F667-EEAD-4DE4-9903-C480CDDEC5C4}.Debug|Win32.ActiveCfg = Debug|Win32
+		{CC21F667-EEAD-4DE4-9903-C480CDDEC5C4}.Debug|Win32.Build.0 = Debug|Win32
+		{CC21F667-EEAD-4DE4-9903-C480CDDEC5C4}.Release|Win32.ActiveCfg = Release|Win32
+		{CC21F667-EEAD-4DE4-9903-C480CDDEC5C4}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
