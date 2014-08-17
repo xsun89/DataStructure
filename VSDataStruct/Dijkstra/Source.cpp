@@ -6,14 +6,14 @@ int main()
 	int i, j, v0;
 	MGraph G;
 	Patharc P;
-	ShortPathTable D; /* 求某点到其余各点的最短路径 */
+	ShortPathTable D;
 	v0 = 0;
 
 	CreateMGraph(&G);
 
 	ShortestPath_Dijkstra(G, v0, &P, &D);
 
-	printf("最短路径倒序如下:\n");
+	printf(":\n");
 	for (i = 1; i < G.numVertexes; ++i)
 	{
 		printf("v%d - v%d : ", v0, i);
@@ -25,7 +25,7 @@ int main()
 		}
 		printf("\n");
 	}
-	printf("\n源点到各顶点的最短路径长度为:\n");
+	printf("\n:\n");
 	for (i = 1; i < G.numVertexes; ++i)
 		printf("v%d - v%d : %d \n", G.vexs[0], G.vexs[i], D[i]);
 

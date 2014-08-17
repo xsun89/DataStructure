@@ -81,7 +81,6 @@ void CreateALGraph(MGraph G, GraphAdjList GL)
 {
 	int i, j;
 	EdgeNode *edgNode;
-	GL = (GraphAdjList)malloc(sizeof(GraphAdjListEntity));
 	GL->numVertexes = G.numVertexes;
 	GL->numEdges = G.numEdages;
 	for (i = 0; i < G.numVertexes;i++)
@@ -101,7 +100,7 @@ void CreateALGraph(MGraph G, GraphAdjList GL)
 				edgNode->adjvex = GL->adjList[j].data;
 				edgNode->next = GL->adjList[i].firstedge;
 				GL->adjList[i].firstedge = edgNode;
-				GL->adjList[i].in++;
+				GL->adjList[j].in++;
 			}
 		}
 	}
@@ -114,7 +113,7 @@ Status TopologicalSort(GraphAdjList GL)
 	int count = 0;
 	int top = 0;
 	int *stack;
-	stack = (int *)malloc(GL->numVertexes * sizeof(int));
+	stack = (int *)malloc((GL->numVertexes) * sizeof(int));
 	for (i = 0; i < GL->numVertexes; i++)
 	{
 		if (GL->adjList[i].in == 0)
@@ -127,10 +126,10 @@ Status TopologicalSort(GraphAdjList GL)
 		gettop = stack[top--];
 		printf("%d -> ", GL->adjList[gettop].data);
 		count++;
-		for (edgeNode = GL->adjList[gettop].firstedge; edgeNode; edgeNode=GL->adjList[gettop].firstedge->next)
+		for (edgeNode = GL->adjList[gettop].firstedge; edgeNode; edgeNode=edgeNode->next)
 		{
 			k = edgeNode->adjvex;
-			int temp = GL->adjList[k].in--;
+			int temp = --(GL->adjList[k].in);
 			if (temp == 0)
 				stack[++top] = k;
 		}

@@ -7,6 +7,7 @@ int main()
 	int result;
 	CreateMGraph(&G);
 	CreateALGraph(G, &GL);
+	printf("%d\n", GL.numVertexes);
 	result = TopologicalSort(&GL);
 	printf("result:%d", result);
 	system("pause");
