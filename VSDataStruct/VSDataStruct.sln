@@ -13,6 +13,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TopologicalSort", "Topologi
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CriticalPath", "CriticalPath\CriticalPath.vcxproj", "{E2E4D2AD-7E65-4CCE-9BAE-8D180B834241}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BinarySearch", "BinarySearch\BinarySearch.vcxproj", "{3D3102D2-E447-4D01-8F48-25EF51C187DA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -39,6 +41,10 @@ Global
 		{E2E4D2AD-7E65-4CCE-9BAE-8D180B834241}.Debug|Win32.Build.0 = Debug|Win32
 		{E2E4D2AD-7E65-4CCE-9BAE-8D180B834241}.Release|Win32.ActiveCfg = Release|Win32
 		{E2E4D2AD-7E65-4CCE-9BAE-8D180B834241}.Release|Win32.Build.0 = Release|Win32
+		{3D3102D2-E447-4D01-8F48-25EF51C187DA}.Debug|Win32.ActiveCfg = Debug|Win32
+		{3D3102D2-E447-4D01-8F48-25EF51C187DA}.Debug|Win32.Build.0 = Debug|Win32
+		{3D3102D2-E447-4D01-8F48-25EF51C187DA}.Release|Win32.ActiveCfg = Release|Win32
+		{3D3102D2-E447-4D01-8F48-25EF51C187DA}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
