@@ -55,3 +55,69 @@ Status InsertBST(BiTree *T, int key)
 	else
 		return FALSE;
 }
+
+Status Delete(BiTree *p)
+{
+	BiTree q, s;
+	if ((*p)->lchild == NULL)
+	{
+		q = *p;
+		*p = (*p)->rchild;
+		free(q);
+	}
+	else if ((*p)->rchild == NULL)
+	{
+		q = (*p);
+		*p = (*p)->lchild;
+		free(q);
+	}
+	else
+	{
+		q = *p;
+		s = (*p)->lchild;
+		while (s->rchild)
+		{
+			q = s;
+			s=s->rchild;
+		}
+		(*p)->data = s->data;
+		if (q != *p)
+			q->rchild = s->lchild;
+		else
+			q->lchild = s->lchild;
+
+		free(s);
+	}
+
+	return TRUE;
+}
+Status DeleteBST(BiTree *T, int key)
+{
+	if (!*T) 
+		return FALSE;
+	else
+	{
+		if (key == (*T)->data)
+			return Delete(T);
+		else if (key < (*T)->data)
+			return DeleteBST(&(*T)->lchild, key);
+		else
+			return DeleteBST(&(*T)->rchild, key);
+
+	}
+}
+int main(void)
+{
+	int i;
+	int a[10] = { 62, 88, 58, 47, 35, 73, 51, 99, 37, 93 };
+	BiTree T = NULL;
+
+	for (i = 0; i < 10; i++)
+	{
+		InsertBST(&T, a[i]);
+	}
+	DeleteBST(&T, 93);
+	DeleteBST(&T, 47);
+	printf("\n");
+	return 0;
+}
