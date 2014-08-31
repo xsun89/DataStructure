@@ -142,7 +142,34 @@ Status InsertAVL(BiTree *T, int e, Status *teller)
 				}
 			}
 		}
+		else
+		{
+			if (!InsertAVL(&(*T)->rchild, e, teller))
+			{
+				return FALSE;
+			}
+			if (*teller)
+			{
+				switch ((*T)->bf)
+				{
+				case LH:
+					(*T)->bf = EH;
+					*teller = FALSE;
+					break;
+				case EH:
+					(*T)->bf = RH;
+					*teller = TRUE;
+					break;
+				case RH:
+					RightBalance(T);
+					*teller = TRUE;
+					break;
+				}
+			}
+		}
 	}
+
+	return TRUE;
 }
 
 
