@@ -138,7 +138,9 @@ Status InsertAVL(BiTree *T, int e, Status *teller)
 					*teller = TRUE;
 					break;
 				case RH:
-
+					(*T)->bf = RH;
+					*teller = FALSE;
+					break;
 				}
 			}
 		}

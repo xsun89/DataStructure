@@ -96,3 +96,52 @@ void SelectSort(SqList *L)
 			swap(L, min, i);
 	}
 }
+
+void InsertSort(SqList *L)
+{
+	int out, in;
+	for (out = 2; out <= L->length; out++)
+	{
+		in = out-1;
+		int temp = L->r[out];
+		while (in>0 && temp < L->r[in])
+		{
+			L->r[in+1] = L->r[in];
+			in--;
+		}
+		L->r[in+1] = temp;
+	}
+}
+
+void ShellSort(SqList *L)
+{
+	int i, j, k = 0;
+	int increment = L->length;
+	do 
+	{
+	} while (increment);
+}
+#define N 9
+int main()
+{
+	int i;
+
+	/* int d[N]={9,1,5,8,3,7,4,6,2}; */
+	int d[N] = { 50, 10, 90, 30, 70, 40, 80, 60, 20 };
+	/* int d[N]={9,8,7,6,5,4,3,2,1}; */
+
+	SqList l0, l1, l2, l3, l4, l5, l6, l7, l8, l9, l10;
+
+	for (i = 0; i < N; i++)
+		l0.r[i + 1] = d[i];
+	l0.length = N;
+	l1 = l2 = l3 = l4 = l5 = l6 = l7 = l8 = l9 = l10 = l0;
+	printf("Before InsertSort:\n");
+	print(l4);
+	printf("InsertSort:\n");
+	InsertSort(&l4);
+	print(l4);
+
+	system("pause");
+	return 0;
+}
