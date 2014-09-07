@@ -115,11 +115,49 @@ void InsertSort(SqList *L)
 
 void ShellSort(SqList *L)
 {
-	int i, j, k = 0;
+	int out, in;
 	int increment = L->length;
 	do 
 	{
-	} while (increment);
+		increment = increment / 3 + 1;
+		for (out = increment + 1; out <= L->length; out ++)
+		{
+			in = out - increment;
+			int temp = L->r[out];
+			while (in>0 && temp <L->r[in])
+			{
+				L->r[in + increment] = L->r[in];
+				in -= increment;
+			}
+			L->r[in + increment] = temp;
+		}
+		printf("increment %d\n", increment);
+		print(*L);
+		printf("\n");
+	} while (increment > 1);
+}
+
+void ShellSort2(SqList *L)
+{
+	int i, j, k = 0;
+	int increment = L->length;
+	do
+	{
+		increment = increment / 3 + 1;
+		for (i = increment + 1; i <= L->length; i++)
+		{
+			if (L->r[i] < L->r[i - increment])
+			{
+				L->r[0] = L->r[i]; 
+				for (j = i - increment; j > 0 && L->r[0] < L->r[j]; j -= increment)
+					L->r[j + increment] = L->r[j]; 
+				L->r[j + increment] = L->r[0]; 
+			}
+		}
+		printf("	%d: ", ++k);
+		print(*L);
+	} while (increment > 1);
+
 }
 #define N 9
 int main()
@@ -139,7 +177,7 @@ int main()
 	printf("Before InsertSort:\n");
 	print(l4);
 	printf("InsertSort:\n");
-	InsertSort(&l4);
+	ShellSort(&l4);
 	print(l4);
 
 	system("pause");
