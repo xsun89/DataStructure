@@ -121,15 +121,19 @@ void ShellSort(SqList *L)
 	{
 		increment = increment / 3 + 1;
 		for (out = increment + 1; out <= L->length; out ++)
-		{
+		{			
 			in = out - increment;
+			printf("first in=%d, out=%d", in, out);
 			int temp = L->r[out];
 			while (in>0 && temp <L->r[in])
 			{
 				L->r[in + increment] = L->r[in];
+				printf("second in=%d, out=%d", in, out);
 				in -= increment;
+				
 			}
 			L->r[in + increment] = temp;
+			printf("\n");
 		}
 		printf("increment %d\n", increment);
 		print(*L);
